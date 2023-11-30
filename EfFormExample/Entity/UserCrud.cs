@@ -35,7 +35,12 @@ namespace EfFormExample.Entity
 
         public User Get(int id)
         {
-            throw new NotImplementedException();
+            var user = db.User.Find(id);
+            if (user != null)
+            {
+                return user;
+            }
+            return null;
         }
 
         public List<User> GetAll()
