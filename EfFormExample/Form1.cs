@@ -121,7 +121,10 @@ namespace EfFormExample
         {
           
             UserDgv.DataSource = userCrud.GetAll();
-
+            UserDgv.Columns["Name"].Visible = false;
+            UserDgv.Columns["Surname"].Visible = false;
+            UserDgv.Columns["IsDelete"].Visible = false;
+            UserDgv.Columns["Role"].Visible = false;
         }
     }
 }
