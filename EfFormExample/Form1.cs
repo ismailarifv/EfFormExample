@@ -16,6 +16,7 @@ namespace EfFormExample
     public partial class Form1 : Form
     {
         RoleCrud roleCrud = new RoleCrud();
+        UserCrud userCrud = new UserCrud();
         public Form1()
         {
             InitializeComponent();
@@ -24,6 +25,8 @@ namespace EfFormExample
         private void Form1_Load(object sender, EventArgs e)
         {
             addRoleMessage_lbl.Visible = false;
+            GetRoleListToCmbx();
+            GetUserListToDgv();
         }
 
         private void AddRole_btn_Click(object sender, EventArgs e)
@@ -51,7 +54,7 @@ namespace EfFormExample
             roleName_txt.Clear();
             status_chck.Checked = false;
             role_img.Image = null;
-            
+            GetRoleListToCmbx();
         }
 
         private void SelectImage_btn_Click(object sender, EventArgs e)
@@ -105,7 +108,20 @@ namespace EfFormExample
             userPassword_txt.Clear();
             userStatus_chbx.Checked=false;
             UserImg = null;
-           
+            GetUserListToDgv();
+        }
+        public void GetRoleListToCmbx()
+        {
+            userRole_cmbx.DataSource = roleCrud.GetAll();
+            userRole_cmbx.DisplayMember = "Name";
+            userRole_cmbx.ValueMember = "Id";
+
+        }
+        public void GetUserListToDgv()
+        {
+          
+            UserDgv.DataSource = userCrud.GetAll();
+
         }
     }
 }

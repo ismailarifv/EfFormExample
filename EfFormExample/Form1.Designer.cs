@@ -52,10 +52,12 @@
             this.UserAddMessage_lbl = new System.Windows.Forms.Label();
             this.UserAdd_btn = new System.Windows.Forms.Button();
             this.userRole_cmbx = new System.Windows.Forms.ComboBox();
+            this.UserDgv = new System.Windows.Forms.DataGridView();
             this.AddRole_gbx.SuspendLayout();
             this.AddUser_gbx.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.role_img)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UserImg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UserDgv)).BeginInit();
             this.SuspendLayout();
             // 
             // AddRole_gbx
@@ -91,7 +93,7 @@
             this.AddUser_gbx.Controls.Add(this.label2);
             this.AddUser_gbx.Controls.Add(this.userName_txt);
             this.AddUser_gbx.Controls.Add(this.label1);
-            this.AddUser_gbx.Location = new System.Drawing.Point(288, 38);
+            this.AddUser_gbx.Location = new System.Drawing.Point(262, 38);
             this.AddUser_gbx.Name = "AddUser_gbx";
             this.AddUser_gbx.Size = new System.Drawing.Size(391, 400);
             this.AddUser_gbx.TabIndex = 1;
@@ -300,11 +302,24 @@
             this.userRole_cmbx.Size = new System.Drawing.Size(121, 21);
             this.userRole_cmbx.TabIndex = 19;
             // 
+            // UserDgv
+            // 
+            this.UserDgv.AllowUserToAddRows = false;
+            this.UserDgv.AllowUserToDeleteRows = false;
+            this.UserDgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.UserDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.UserDgv.Location = new System.Drawing.Point(667, 50);
+            this.UserDgv.Name = "UserDgv";
+            this.UserDgv.ReadOnly = true;
+            this.UserDgv.Size = new System.Drawing.Size(349, 388);
+            this.UserDgv.TabIndex = 2;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(962, 450);
+            this.ClientSize = new System.Drawing.Size(1032, 450);
+            this.Controls.Add(this.UserDgv);
             this.Controls.Add(this.AddUser_gbx);
             this.Controls.Add(this.AddRole_gbx);
             this.Name = "Form1";
@@ -316,6 +331,7 @@
             this.AddUser_gbx.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.role_img)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UserImg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UserDgv)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -346,6 +362,7 @@
         private System.Windows.Forms.ComboBox userRole_cmbx;
         private System.Windows.Forms.Label UserAddMessage_lbl;
         private System.Windows.Forms.Button UserAdd_btn;
+        private System.Windows.Forms.DataGridView UserDgv;
     }
 }
 

@@ -40,7 +40,7 @@ namespace EfFormExample.Entity
 
         public List<User> GetAll()
         {
-            throw new NotImplementedException();
+            return db.User.Where(x=>x.IsDelete==false).ToList();
         }
 
         public bool Update(User entity, int id)

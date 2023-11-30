@@ -34,7 +34,7 @@ namespace EfFormExample.Entity
 
         public List<Role> GetAll()
         {
-            throw new NotImplementedException();
+            return db.Role.Where(x=> x.IsDelete==false).ToList();
         }
 
         public bool Update(Role entity, int id)
