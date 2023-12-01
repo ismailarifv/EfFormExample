@@ -35,9 +35,6 @@ namespace EfFormExample
             UserStatu_lbl.ForeColor = user1.IsStatus ? Color.Green : Color.Red; 
         }
 
-        private void userName_lbl_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

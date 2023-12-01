@@ -24,7 +24,8 @@ namespace EfFormExample
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            UserDgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            RoleDgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             functions.GetRoleListToDgv(RoleDgv);
             functions.GetUserListToDgv(UserDgv);
         }

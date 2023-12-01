@@ -160,7 +160,6 @@
             this.userName_lbl.Size = new System.Drawing.Size(45, 17);
             this.userName_lbl.TabIndex = 7;
             this.userName_lbl.Text = "Name";
-            this.userName_lbl.Click += new System.EventHandler(this.userName_lbl_Click);
             // 
             // UserDetail
             // 
@@ -180,6 +179,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.name_lbl);
             this.Name = "UserDetail";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UserDetail";
             this.Load += new System.EventHandler(this.UserDetail_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
