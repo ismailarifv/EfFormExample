@@ -29,7 +29,12 @@ namespace EfFormExample.Entity
 
         public Role Get(int id)
         {
-            throw new NotImplementedException();
+            var role = db.Role.Find(id);
+            if (role != null)
+            {
+                return role;
+            }
+            return null;
         }
 
         public List<Role> GetAll()

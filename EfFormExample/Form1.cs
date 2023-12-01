@@ -56,5 +56,11 @@ namespace EfFormExample
             userDetail.ShowDialog();
 
         }
+
+        private void userList_btn_Click(object sender, EventArgs e)
+        {
+            UserListForm userListForm = new UserListForm();
+            userListForm.ShowDialog();
+        }
     }
 }

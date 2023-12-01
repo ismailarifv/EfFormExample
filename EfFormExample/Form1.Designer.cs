@@ -34,6 +34,7 @@
             this.userList_lbl = new System.Windows.Forms.Label();
             this.RoleDgv = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.userList_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.UserDgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RoleDgv)).BeginInit();
             this.SuspendLayout();
@@ -107,11 +108,25 @@
             this.label1.TabIndex = 23;
             this.label1.Text = "Role List";
             // 
+            // userList_btn
+            // 
+            this.userList_btn.BackColor = System.Drawing.Color.DarkGreen;
+            this.userList_btn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.userList_btn.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.userList_btn.Location = new System.Drawing.Point(12, 406);
+            this.userList_btn.Name = "userList_btn";
+            this.userList_btn.Size = new System.Drawing.Size(156, 31);
+            this.userList_btn.TabIndex = 25;
+            this.userList_btn.Text = "User List";
+            this.userList_btn.UseVisualStyleBackColor = false;
+            this.userList_btn.Click += new System.EventHandler(this.userList_btn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1032, 450);
+            this.Controls.Add(this.userList_btn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.RoleDgv);
             this.Controls.Add(this.userList_lbl);
@@ -136,6 +151,7 @@
         private System.Windows.Forms.Label userList_lbl;
         private System.Windows.Forms.DataGridView RoleDgv;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button userList_btn;
     }
 }
 
